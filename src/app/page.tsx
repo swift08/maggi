@@ -916,10 +916,10 @@ export default function Home() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-3 text-[#0F3D56] text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-[#0F3D56] text-center">
               <span className="text-gradient-sky">Services</span>
             </h2>
-            <p className="text-lg text-[#3A6E8F] max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-[#3A6E8F] max-w-3xl mx-auto px-4">
               Fully floral hero animations, kinetic props, and immersive 3D stages—crafted differently for every ritual and modern celebration.
             </p>
           </div>
@@ -971,8 +971,8 @@ export default function Home() {
                         <service.icon className="w-6 h-6 text-[#0F3D56]" />
                       </div>
                     </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-xl font-bold text-white drop-shadow-2xl mb-1">{service.title}</h3>
+                    <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                      <h3 className="text-lg sm:text-xl font-bold text-white drop-shadow-2xl mb-1">{service.title}</h3>
                     </div>
                   </div>
                   
@@ -996,7 +996,7 @@ export default function Home() {
                     </div>
                   )}
 
-                  <p className="text-[#3A6E8F] leading-relaxed mb-4">{service.description}</p>
+                  <p className="text-sm sm:text-base text-[#3A6E8F] leading-relaxed mb-3 sm:mb-4">{service.description}</p>
 
                   {isHighlight && (
                     <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FDECF6] text-[#A43E77] text-xs font-semibold mb-3">
@@ -1486,11 +1486,11 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {businessHighlights.map((highlight, index) => (
               <motion.div
                 key={highlight.title}
-                className="p-6 rounded-3xl shadow-xl section-card-hover floral-hover-glow floral-hover-swirl"
+                className="p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-xl section-card-hover floral-hover-glow floral-hover-swirl"
                 style={{
                   background: 'rgba(255, 255, 255, 0.95)',
                   border: '2px solid rgba(250, 209, 231, 0.4)',
@@ -1513,13 +1513,13 @@ export default function Home() {
                   }
                 }}
               >
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 text-white" style={{
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 text-white" style={{
                   background: 'linear-gradient(135deg, rgba(250, 209, 231, 0.9) 0%, rgba(188, 225, 241, 0.9) 100%)'
                 }}>
-                  <Sparkles className="w-5 h-5" />
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#0F3D56] mb-2">{highlight.title}</h3>
-                <p className="text-[#3A6E8F] leading-relaxed">{highlight.detail}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0F3D56] mb-2">{highlight.title}</h3>
+                <p className="text-sm sm:text-base text-[#3A6E8F] leading-relaxed">{highlight.detail}</p>
               </motion.div>
             ))}
           </div>
